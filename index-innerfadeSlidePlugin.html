@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(1-innerfadePlugin slide)웹기능사실기9~12레이아웃</title>
+    <!-- link(enter)- <style> 을 외부링크로 빼주는 역할을 함-->
+    <link rel="stylesheet" href="./css/style.css"> 
+<!-- script:src -->
+<!-- 제이쿼리는 무조건 최상단, 
+    예전 구조를 안고가는 버젼이 1이라서 이걸루 코딩해줌 -->
+<script src="./script/jquery-1.11.3.min.js"></script>
+<!-- jquery.innerfade.js <- 제이쿼리플러그인, 나타났다사라짐 -->
+<script src="./script/jquery.innerfade.js"></script>
+
+<script src="./script/script.js"></script>
+
+</head>
+<body>
+    <div id="wrap"> 
+        <!-- header+main (enter) --> 
+        <header> 
+            <!-- h1.logo+nav.menu -->  
+            <h1 class="logo"></h1> 
+            <nav class="menu"></nav> 
+        </header> 
+        <main>
+            <div class="slide">
+                <div class="innerFade">
+                    <!-- .slideImg>a>img -->
+                    <!-- # >> 임시링크 -->
+                    <div class="slideImg"><a href="#"><img src="./images/slide1.jpg" alt="슬라이드1"></a></div>
+                    <div class="slideImg"><a href="#"><img src="./images/slide2.jpg" alt="슬라이드2"></a></div>
+                    <div class="slideImg"><a href="#"><img src="./images/slide3.jpg" alt="슬라이드3"></a></div>
+                </div>
+            </div>
+            <div class="contents"></div>
+            <footer></footer>
+        </main>  
+    </div>
+
+</body>
+</html>

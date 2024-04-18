@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    width: 1000px;
+    height: 650px;
+    background-color: #999;
+    display: flex;
+}
+
+#wrap header {
+    width: 200px;
+    height: 650px;
+    background-color: #443f3f;
+}
+
+#wrap header .logo {
+    width: 200px;
+    height: 100px;
+    background-color: #6f6f6f;
+}
+
+#wrap header .menu {
+    width: 200px;
+    height: 550px;
+    background-color: #3e3e3e;
+}
+
+#wrap main .slide {
+    width: 800px;
+    height: 350px;
+    overflow: hidden;
+    /* 마스크처리 하기 - 가려줌 */
+    background-color: #fff;
+    position: relative; /* 기준점 */
+    
+}
+
+
+
+/* 위아래슬라이드 컨테이너 */
+#wrap main .slide .topSlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* fadeSlide 컨테이너 */
+#wrap main .slide .fadeSlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+/* 좌우 슬라이드 컨테이너 */
+#wrap main .slide .leftSlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex; 
+}
+
+
+
+
+#wrap main .slide a,
+#wrap main .slide img {
+    display: block;
+}
+
+
+#wrap main .contents {
+    width: 800px;
+    height: 200px;
+    background-color: #6f6f6f;
+}
+
+#wrap main footer {
+    width: 800px;
+    height: 100px;
+    background-color: #000000;
+}
+
+
+#wrap main {
+    width: 800px;
+    height: 650px;
+    background-color: #ffa2a2;
+}

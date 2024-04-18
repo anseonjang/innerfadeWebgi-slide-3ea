@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 자바스크립트 기초 문법 - 증감연산자(++,--), 함수 (function), 반복문(for) </title>
+    <script>
+        /* =============================================
+             // ● 증감연산자 : 1씩 증가 ++ / 1씩 감소 -- 
+        =============================================== */
+
+        var anseon = 48;
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+        document.write(anseon-- + "<br>");
+
+        /* 결과 : 
+        48
+        47
+        46
+        45
+        44
+        43
+        42
+        41
+        40
+        39
+        38
+
+       
+      
+    /* =============================================
+             // ●   함수 
+    =============================================== */
+        var i = 7;
+
+        function as() {
+            i++;
+            document.write("anseon" + i, "<br>");
+        }
+        as();
+        as();
+        as();
+        as();
+        as();
+        as();
+        as();
+        as();
+        as();
+
+        /* 결과 :  
+        anseon8
+        anseon9
+        anseon10
+        anseon11
+        anseon12
+        anseon13
+        anseon14
+        anseon15
+        anseon16 
+        */
+
+        /* 
+        ● 함수란? 
+            키보드, 리모콘 
+            (실행문을 저장했다가 필요할때 꺼내쓰는 것이 함수임) 
+
+            ● 변수  var -> variable의 약자 
+            하나에 한개의 데이터 저장 
+            변수명의 맨앞에는, 영문, _, $ 만 가능 
+            변수명 지정시, 영문, _, $, 숫자만 가능 
+            자바스크립트는, 무조건 첫번째 요소가 0
+            = : 넣어줌을 의미 
+        */
+
+        /* =============================================
+          //  ●  반복문 (for) : 초기값 , 조건식, 증감식 
+        =============================================== */
+
+        for (var anseon = 10; anseon >= 1; anseon--) {
+            document.write(anseon + "<br>");
+        }
+        /* 결과 : 
+        10
+        9
+        8
+        7
+        6
+        5
+        4
+        3
+        2
+        1
+        */
+
+
+        /* =============================================
+             //  ●  비교연산자 - 비교할때 사용 
+             == : 같다 / !== : 다르다 / > : 크다 / < : 작다
+         =============================================== */
+
+        var c = 10;
+        var d = 20;
+        document.write((c > d) + "<br>"); // false 
+        document.write((c < d) + "<br>"); // true 
+        document.write((c == d) + "<br>"); // false 
+        document.write((c !== d) + "<br>"); // true
+
+        /* =============================================
+             //  ●  산술연산지 - 더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지 (%)
+         =============================================== */
+
+        document.write("anseon" + "<br>");
+        document.write((1 + 1) + "<br>");
+        document.write((8 + 4) + "<br>");
+        document.write((6 * 7) + "<br>");
+        document.write((12 / 16) + "<br>");
+        document.write((10 % 3) + "<br>"); //  1
+
+        /* 결과 : 
+        anseon
+        2
+        12
+        42
+        0.75
+        1
+        */
+
+        /* =============================================
+            //  ●  조건문 (if) - 조건이 참일때만 실행 
+            if(조건식){
+                실행문;
+            }
+        =============================================== */
+        var e = 10;
+        var f = 20;
+        var g = 30;
+        if (e > f) {
+            document.write("e가 f보다 큼") // 거짓이니 실행 안됨
+        } else if (f > g) {
+            document.write("f가 g보다 큼") // 거짓이니 실행 안됨
+        } else {
+            document.write("어쩌라구??!!!")
+        }
+        /*
+        결과 : 어쩌라구??!!! 
+        */
+        /* =============================================
+            //  ●  배열 - 하나의 변수에 여러개의 데이터 저장 가능
+            자바스크립트는, 무조건 첫번째 요소가 0임 
+        =============================================== */
+
+        var fruits = ["블루베리", "딸기", "바나나"]; // 0,1,2
+        document.write("<br><br><br>" + fruits[2]);
+
+        /*
+            1. 문자형(string) - " " , ' ' 에 둘러싸인 데이터는, 문자 (태그,문장,텍스트,단어)
+            2. 숫자형(number) - 숫자로 정의되는 데이터 (정수,소수표현) 
+            수학적 연산이 가능한 숫자가 됨 
+            3. 논리형(boolean) - 참인지, 거짓인지 정의하는 데이터 (참일때만 실행됨) 
+            4. 널형 (null) - 비어있음을 정의하는데이터 
+
+            자바스크립트는, 
+            변수명이 최상단에 문자열" "로 표시가 되면,
+            뒤에 변수들이 숫자로만 써줘도 
+            숫자형 속성이 해제되고 문자열이 됨. 
+        */
+
+        // var time1 = "현재 시간은";
+        var time2 = 1;
+        var time3 = 2;
+        var time4 = "시입니다.";
+        var time5 = time2 + time3 + time4;
+        document.write("<br>" + time5);
+
+        /* =============================================
+            //  ● 변수의 재할당
+        =============================================== */
+        var x = "anseon";
+        x = 48; // 재할당
+        document.write("<br>" + x);
+        /*
+        결과 : 48 
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
